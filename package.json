@@ -1,0 +1,34 @@
+{
+  "name": "snippetvault",
+  "version": "1.0.0",
+  "description": "SnippetVault - 智能代码片段管理工具",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && python app.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "build:desktop": "npm run build && cd desktop && npm run build",
+    "start": "cd desktop && npm start",
+    "lint": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "code-snippets",
+    "snippet-manager",
+    "developer-tools",
+    "productivity",
+    "electron",
+    "react",
+    "fastapi"
+  ],
+  "author": "SnippetVault Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/snippetvault.git"
+  }
+}
